@@ -18,7 +18,7 @@ const About = () => {
         <div className="w-[calc((100vw)/2)] h-[calc((100vw)/2)] md:w-1/3 md:h-[calc((100vw-64px)/3)] relative">
           <Image
             src={'/avatarr.jpg'}
-            alt="Picture of the author"
+            alt="Avatar"
             layout="fill" // required
             objectFit="cover" // change to suit your needs
             // className="rounded-xl md:rounded-full"
