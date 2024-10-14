@@ -6,7 +6,7 @@ import Publications from "@/components/Publications";
 
 export default function Home() {
   return (
-    <div>
+    <div className="px-4 lg:px-8">
       <About />
       <Experience />
       <Projects />
