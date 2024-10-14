@@ -7,7 +7,8 @@ const About = () => {
 
   return (
     <div className=''>
-      <div>ABOUT ME</div>
+      <div className='page-title'>ABOUT ME</div>
+  
       <div className='flex flex-col md:flex-row items-center justify-center gap-4'>
         <div className='md:w-2/3'>
           <div>Hello! My name is Azat Azamat</div>

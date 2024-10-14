@@ -77,7 +77,8 @@ const Experience = () => {
 
   return (
     <div>
-      <div>EXPERIENCE</div>
+      <div className='page-title'>EXPERIENCE</div>
+  
       <Timeline data={data} />
     </div>
   )
