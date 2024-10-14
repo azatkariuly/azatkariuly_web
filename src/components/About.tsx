@@ -17,8 +17,7 @@ const About = () => {
         </div>
         <div className="w-[calc((100vw)/2)] h-[calc((100vw)/2)] md:w-1/3 md:h-[calc((100vw-64px)/3)] relative">
           <Image
-            // src={'/profile.JPG'}
-            src={'/avatarrr.jpg'}
+            src={'/avatarr.jpg'}
             alt="Picture of the author"
             layout="fill" // required
             objectFit="cover" // change to suit your needs
