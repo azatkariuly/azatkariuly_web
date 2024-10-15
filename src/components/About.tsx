@@ -11,13 +11,13 @@ const About = () => {
       <div className='page-title'>ABOUT ME</div>
   
       <div className='flex flex-col md:flex-row items-center justify-center gap-4'>
-        <div className="w-[calc((100vw)/2)] h-[calc((100vw)/2)] md:w-1/3 md:h-[calc((100vw-64px)/3)] relative">
+        <div className="w-[calc((100vw)/2)] h-[calc((100vw)/2)] md:w-1/3 md:h-[calc((100vw-64px)/3)] relative mr-8">
           <Image
             src={'/avatar.jpg'}
             alt="Avatar"
             layout="fill" // required
             objectFit="cover" // change to suit your needs
-            // className="rounded-xl md:rounded-full"
+            className="rounded-xl md:rounded-full"
           />
         </div>
         <div className='flex flex-col md:w-2/3 text-lg md:textxl pr-10'>
