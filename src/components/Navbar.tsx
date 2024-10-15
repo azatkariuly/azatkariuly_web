@@ -10,7 +10,7 @@ const Navbar = () => {
             <Link href={'/'}>
                 <div className='text-2xl tracking-wide'>azatkariuly</div>
             </Link>
-            <Menu/>
+            {/* <Menu/> */}
         </div>
         {/* BIGGER SCREENS */}
         <div className='hidden lg:flex items-center justify-between gap-8 h-full'>
