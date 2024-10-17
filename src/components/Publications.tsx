@@ -4,7 +4,7 @@ import { publicationsData } from '@/data'
 
 const Publications = () => {
   return (
-    <div>
+    <div id='publications'>
       <div className='page-title'>PUBLICATIONS</div>
       <HoverEffect items={publicationsData} />
     </div>

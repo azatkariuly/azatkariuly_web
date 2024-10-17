@@ -13,7 +13,7 @@ export default function Home() {
       <Projects />
       <Publications />
       <Patents />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 }

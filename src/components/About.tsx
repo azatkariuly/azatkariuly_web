@@ -7,7 +7,7 @@ const About = () => {
   const words = ["a Full-Stack Developer", "an AI Researcher"];
 
   return (
-    <div className=''>
+    <div id='about' className=''>
       <div className='page-title'>ABOUT ME</div>
   
       <div className='flex flex-col md:flex-row items-center justify-center gap-4'>

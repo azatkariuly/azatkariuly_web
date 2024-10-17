@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Projects = () => {
     return (
-        <div className='min-h-[400px]'>
+        <div id='projects' className='min-h-[400px]'>
             <div className='page-title'>PROJECTS</div>
             <BentoGrid className="max-w-4xl mx-auto">
                 {items.map((item, i) => (

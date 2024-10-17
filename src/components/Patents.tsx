@@ -4,7 +4,7 @@ import { patentsData } from '@/data'
 
 const Patents = () => {
     return (
-        <div>
+        <div id='patents'>
             <div className='page-title'>PATENTS</div>
             <HoverEffect items={patentsData} />
         </div>

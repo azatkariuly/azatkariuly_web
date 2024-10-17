@@ -76,7 +76,7 @@ const Experience = () => {
   ];
 
   return (
-    <div>
+    <div id='experience'>
       <div className='page-title'>EXPERIENCE</div>
   
       <Timeline data={data} />
