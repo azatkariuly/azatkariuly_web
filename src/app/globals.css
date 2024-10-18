@@ -7,6 +7,19 @@
   --foreground: #171717;
 }
 
+input {
+  border: 1px solid #ccc;
+  height: 42px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 6px;
+}
+
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
