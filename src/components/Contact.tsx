@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { useForm, ValidationError } from '@formspree/react';
 import Image from 'next/image';
-import { ButtonsCard } from './ui/tailwind-css-buttons';
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("myzyyorp");
