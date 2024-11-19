@@ -20,7 +20,7 @@ const About = () => {
       <div className='flex flex-col md:flex-row items-center justify-center gap-4'>
         <div className="w-[calc((100vw)/2)] h-[calc((100vw)/2)] md:w-1/2 md:h-[calc((100vw-64px)/3)] relative mr-8">
           <Image
-            src={'/avatar1.png'}
+            src={'/avatar1.PNG'}
             alt="Avatar"
             layout="fill" // required
             objectFit="cover" // change to suit your needs
