@@ -7,13 +7,15 @@ import Publications from "@/components/Publications";
 
 export default function Home() {
   return (
-    <div className="flex flex-col px-4 lg:px-8 gap-10">
+    <div>
       <About />
-      <Experience />
-      <Projects />
-      <Publications />
-      <Patents />
-      <Contact />
+      <div className="flex flex-col px-4 lg:px-8 gap-10 py-8">
+        <Experience />
+        <Projects />
+        <Publications />
+        <Patents />
+        <Contact />
+      </div>
     </div>
   );
 }

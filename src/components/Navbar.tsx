@@ -1,49 +1,86 @@
 'use client';
 import Link from 'next/link'
-import React from 'react'
-import Menu from './Menu'
+import React, { useState } from 'react'
 
-const Navbar = () => {
+import {  Navbar,   NavbarBrand,   NavbarContent,   NavbarItem,   NavbarMenuToggle,  NavbarMenu,  NavbarMenuItem} from "@nextui-org/navbar";
+
+const MyNavbar = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const menuItems = [
+        {title: "About", link: "about"},
+        {title: "Experience", link: "experience"},
+        {title: "Projects", link: "projects"},
+        {title: "Publications", link: "publications"},
+        {title: "Patents", link: "patents"},
+        {title: "Contact", link: "contact"},
+    ];
     const scrolltoHash = function (element_id: string) {
         const element = document.getElementById(element_id)
         element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     }
 
     return (
-        <div className='h-20 px-4 lg:px-8 relative'>
-            {/* MOBILE */}
-            <div className='h-full flex items-center justify-between lg:hidden '>
-                <Link href={'/'}>
-                    <div className='text-2xl tracking-wide'>azatkariuly</div>
-                </Link>
-                {/* <Menu/> */}
-            </div>
-            {/* BIGGER SCREENS */}
-            <div className='hidden lg:flex items-center justify-between gap-8 h-full'>
-                {/* LEFT */}
-                <div className='w-1/3'>
+        <Navbar
+            isBordered 
+            isMenuOpen={isMenuOpen}
+            onMenuOpenChange={setIsMenuOpen}
+            shouldHideOnScroll
+        >
+            <NavbarContent className="sm:hidden" justify="start">
+                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"}/>
+            </NavbarContent>
+
+            <NavbarContent className="sm:hidden pr-3" justify="center">
+                <NavbarBrand>
+                    {/* <AcmeLogo /> */}
                     <Link href={'/'}>
-                        <div className='text-2xl tracking-wide'>azatkariuly</div>
+                        <div className='text-xl tracking-wide'>azatkariuly</div>
                     </Link>
-                </div>
-                {/* RIGHT */}
-                <div className='w-2/3 flex gap-10 justify-end'>
-                    <div className='cursor-pointer' onClick={() => scrolltoHash('about')}>About</div>
-                    <div className='cursor-pointer' onClick={() => scrolltoHash('experience')}>Experience</div>
-                    <div className='cursor-pointer' onClick={() => scrolltoHash('projects')}>Projects</div>
-                    <div className='cursor-pointer' onClick={() => scrolltoHash('publications')}>Publications</div>
-                    <div className='cursor-pointer' onClick={() => scrolltoHash('patents')}>Patents</div>
-                    <div className='cursor-pointer' onClick={() => scrolltoHash('contact')}>Contact</div>
-                    {/* <Link href={'/'}>About</Link>
-                    <Link href={'/experience'}>Experience</Link>
-                    <Link href={'/projects'}>Projects</Link>
-                    <Link href={'#publications'}>Publications</Link>
-                    <Link href={'/patents'}>Patents</Link>
-                    <Link href={'/contact'}>Contact</Link> */}
-                </div>
-            </div>
-        </div>
+                </NavbarBrand>
+            </NavbarContent>
+
+            <NavbarContent className="hidden sm:flex gap-4" justify="end">
+                <NavbarBrand className='mr-8'>
+                    {/* Logo /> */}
+                    <Link href={'/'}>
+                        <div className='text-xl tracking-wide'>azatkariuly</div>
+                    </Link>
+                </NavbarBrand>
+                
+
+                <NavbarItem>
+                    <Link href={'/#about'} scroll={true}>About</Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link href={'/#experience'} scroll={true}>Experience</Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link href={'/#projects'} scroll={true}>Projects</Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link href={'/#publications'} scroll={true}>Publications</Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link href={'/#patents'} scroll={true}>Patents</Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link href={'/#contact'} scroll={true}>Contact</Link>
+                </NavbarItem>
+                <NavbarItem>
+                </NavbarItem>
+            </NavbarContent>
+
+            <NavbarMenu>
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem key={`${item}-${index}`}>
+                        <div className='cursor-pointer' onClick={() => scrolltoHash(item.link)}>{item.title}</div>
+                    </NavbarMenuItem>
+                ))}
+            </NavbarMenu>
+        </Navbar>
     )
 }
 
-export default Navbar
+export default MyNavbar

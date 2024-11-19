@@ -10,13 +10,20 @@
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
+    "@nextui-org/navbar": "^2.0.37",
+    "@nextui-org/system": "^2.2.6",
+    "@nextui-org/theme": "^2.2.11",
+    "@radix-ui/react-aspect-ratio": "^1.1.0",
     "@tabler/icons-react": "^3.19.0",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.11.8",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.460.0",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.5.3"
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
