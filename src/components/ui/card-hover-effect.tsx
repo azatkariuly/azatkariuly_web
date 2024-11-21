@@ -16,6 +16,19 @@ export const HoverEffect = ({
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  const renderText = (str: string) => {
+    const regex = /{(.*?)}/g; // Matches text inside curly braces
+    const parts = str.split(regex);
+
+    return parts.map((part, index) =>
+      regex.test(`{${part}}`) ? (
+        <span key={index}>{part}</span>
+      ) : (
+        <strong key={index}>{part}</strong>
+      )
+    );
+  };
+
   return (
     <div
       className={cn(
@@ -50,7 +63,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           {/* <div>{item.title}</div> */}
           <Card>
-            <CardTitle>{item.title}</CardTitle>
+            <CardTitle>{renderText(item.title)}</CardTitle>
           </Card>
         </Link>
       ))}
@@ -72,7 +85,7 @@ export const Card = ({
         className
       )}
     >
-      <div className="relative z-50">
+      <div className="relative z-20">
         <div className="p-1">{children}</div>
       </div>
     </div>

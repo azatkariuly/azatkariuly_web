@@ -8,7 +8,7 @@ const Experience = () => {
       content: (
         <div>
           <h2 className="md:block text-lg md:text-2xl font-bold ">
-            Full-Stack Developer, @SPOCLIP AI
+            Chef Technology Officer (CTO), AI & Full-Stack Developer, @SPOCLIP AI
           </h2>
           <ul className={"list-disc list-inside text-xs md:text-sm font-normal mt-8"}>
             <li className='mb-4'>

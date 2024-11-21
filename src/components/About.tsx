@@ -14,39 +14,42 @@ const About = () => {
   ]
 
   return (
-    <div id='about' className="bg-[url('/background.jpeg')] bg-cover bg-center h-screen flex flex-col items-center justify-center px-4">
-      <div className='-mt-12 page-title'>ABOUT ME</div>
-  
-      <div className='flex flex-col md:flex-row items-center justify-center gap-4'>
-        <div className="w-[calc((100vw)/2)] h-[calc((100vw)/2)] md:w-1/2 md:h-[calc((100vw-64px)/3)] relative mr-8">
-          <Image
-            src={'/avatar1.PNG'}
-            alt="Avatar"
-            layout="fill" // required
-            objectFit="cover" // change to suit your needs
-            className="rounded-xl md:rounded-none"
-          />
-        </div>
-        <div className='flex flex-col md:w-2/3 text-lg md:textxl pr-10'>
-          <div className='font-custom font-bold text-3xl lg:text-6xl text-center'>My name is Azat & I'm <FlipWords words={words}/></div>
-          <div className='mt-8'>
-            I enjoy tackling complex problems, building innovative solutions, and continuously expanding my knowledge. Outside of work, I'm a sports enthusiast, with a special love for soccer and strength training.
+    <div id='about' className="bg-[url('/background.jpeg')] bg-cover bg-center h-screen -mt-16 flex flex-col items-center justify-center px-4 min-h-[612px]">
+      <div className='flex flex-col items-center'>
+        <div className='font-bold'>ABOUT ME</div>
+        
+        <div className='flex flex-col md:flex-row items-center justify-center gap-4'>
+          <div className="w-[calc((100vw)/2)] h-[calc((100vw)/2)] md:w-1/2 md:h-[calc((100vw-64px)/3)] relative mr-8">
+            <Image
+              src={'/avatar1.PNG'}
+              alt="Avatar"
+              layout="fill" // required
+              objectFit="cover" // change to suit your needs
+              className="rounded-xl md:rounded-none"
+            />
           </div>
-          <div className='flex mt-4 gap-2'>
-            {icons.map((icon, i) => (
-              <Link href={icon.link} key={i}>
-                <Image
-                  src={icon.image}
-                  alt='Social'
-                  width={28}
-                  height={28}
-                />
-            </Link>
-            ))}
-            
+          <div className='flex flex-col md:w-2/3 text-lg md:textxl pr-10'>
+            <div className='font-custom font-bold text-3xl lg:text-5xl text-center'>My name is Azat & I'm <FlipWords words={words}/></div>
+            <div className='mt-8 text-center'>
+              I enjoy tackling complex problems, building innovative solutions, and continuously expanding my knowledge. Outside of work, I'm a sports enthusiast, with a special love for soccer and strength training.
+            </div>
+            <div className='flex mt-4 gap-2 justify-center'>
+              {icons.map((icon, i) => (
+                <Link href={icon.link} key={i}>
+                  <Image
+                    src={icon.image}
+                    alt='Social'
+                    width={28}
+                    height={28}
+                  />
+              </Link>
+              ))}
+              
+            </div>
           </div>
         </div>
       </div>
+      
     </div>
   )
 }

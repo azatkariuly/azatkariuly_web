@@ -26,6 +26,7 @@ const MyNavbar = () => {
             isBordered 
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
+            className='z-30'
             shouldHideOnScroll
         >
             <NavbarContent className="sm:hidden" justify="start">
