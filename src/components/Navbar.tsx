@@ -73,7 +73,7 @@ const MyNavbar = () => {
                 </NavbarItem>
             </NavbarContent>
 
-            <NavbarMenu>
+            <NavbarMenu className='justify-center items-center'>
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>
                         <div className='cursor-pointer' onClick={() => {

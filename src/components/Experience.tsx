@@ -8,8 +8,9 @@ const Experience = () => {
       content: (
         <div>
           <h2 className="md:block text-lg md:text-2xl font-bold ">
-            Chef Technology Officer (CTO), AI & Full-Stack Developer, @SPOCLIP AI
+            Chef Technology Officer (CTO), AI & Full-Stack Developer
           </h2>
+          <h3>@SPOCLIP AI</h3>
           <ul className={"list-disc list-inside text-xs md:text-sm font-normal mt-8"}>
             <li className='mb-4'>
               Led cross-functional teams in building AI-driven applications from scratch, improving operational efficiency by up to 74%
@@ -32,8 +33,9 @@ const Experience = () => {
       content: (
         <div>
           <h2 className="md:block text-lg md:text-2xl font-bold">
-            Research Assistant, @UNIST
+            Research Assistant
           </h2>
+          <h3>@UNIST</h3>
           <ul className={"list-disc list-inside text-xs md:text-sm font-normal mt-8"}>
             <li className='mb-4'>
               Conducted cutting-edge research on neural network accelerators and quantization techniques, aiming to optimize AI
@@ -58,8 +60,9 @@ const Experience = () => {
       content: (
         <div>
           <h2 className="md:block text-lg md:text-2xl font-bold ">
-          Software Engineer Intern, @QULIX SYSTEMS
+          Software Engineer Intern
           </h2>
+          <h3>@QULIX SYSTEMS</h3>
           <ul className={"list-disc list-inside text-xs md:text-sm font-normal mt-8"}>
             <li className='mb-4'>
             Created a comprehensive student course registration system from scratch, streamlining the enrollment process for both
