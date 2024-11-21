@@ -27,7 +27,7 @@ const MyNavbar = () => {
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
             className='z-30'
-            shouldHideOnScroll
+            // shouldHideOnScroll
         >
             <NavbarContent className="sm:hidden" justify="start">
                 <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"}/>
@@ -76,7 +76,10 @@ const MyNavbar = () => {
             <NavbarMenu>
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>
-                        <div className='cursor-pointer' onClick={() => scrolltoHash(item.link)}>{item.title}</div>
+                        <div className='cursor-pointer' onClick={() => {
+                            scrolltoHash(item.link)
+                            setIsMenuOpen(false)
+                        }}>{item.title}</div>
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>
